@@ -1,0 +1,25 @@
+{
+  "name": "configure-grunt-ex",
+  "homepage": "https://github.com/anbinhtrong/ConfigureGruntEx",
+  "authors": [
+    "Tam Chieu <tam.chieu@newoceaninfosys.com>"
+  ],
+  "description": "Configure grunt example",
+  "main": "index.html",
+  "keywords": [
+    "angular",
+    "gruntfile"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#^1.5.9",
+    "bootstrap": "^3.3.7"
+  }
+}
