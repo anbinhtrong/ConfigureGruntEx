@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app='TestApp'>
+<html lang="en" ng-app='mainApp'>
 
 <head>
     <meta charset="utf-8">
@@ -8,14 +8,16 @@
 </head>
 
 <body>
-    <div class="row" style="margin-left: 1em;" ng-controller="HomeCtrl">
-    	<h1>Example</h1>
-    	<p>Nothing here {{'yet' + '!'}}</p>
+    <div class="row" style="margin-left: 1em;">
+    	<div ng-view></div>
     </div>
 
     <script src="../bower_components/jquery/dist/jquery.js"></script>
-    <script src="../bower_components/angular/angular.js"></script>
-    <script src="js/homeController.js"></script>
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular-route.js""></script>
+    <script src="js/app.js"></script>
+    <script src="js/firstController.js"></script>
+    <script src="js/secondController.js"></script>
 </body>
 
 </html>

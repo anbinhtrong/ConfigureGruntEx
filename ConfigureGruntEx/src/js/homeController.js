@@ -1,5 +1,5 @@
-﻿var app = angular.module('TestApp', []);
-app.controller('HomeCtrl',['$scope', function($scope) {
-    $scope.message = 'Hello World';
-    console.log($scope.message);
+
+mainApp.controller('homeCtrl', ['$scope', function($scope) {
+    // create a message to display in our view
+    $scope.message = 'Everyone come and see how good I look!';
 }]);
