@@ -4,26 +4,29 @@ module.exports = function(grunt) {
     // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        // copy: {
-        //     dist: {                
-        //         src: 'src/js/*',//'src/js/<%= pkg.main %>',
-        //         dest: 'dist/<%= pkg.name %>-<%= pkg.version %>.js'
-        //     }
-        // }
         uglify: {
             build: {
-                files:{
-                    'dist/out.min.js': ['src/js/firstController.js', 'src/js/secondController.js']    
-                }                
+                files: {
+                    'dist/out.min.js': ['src/js/firstController.js', 'src/js/secondController.js']
+                }
             }
         },
         concat: {
-            dist:{
+            dist: {
                 src: ['src/js/firstController.js', 'src/js/secondController.js'],
                 dest: 'dist/merge.js'
             }
+        },
+        printConfig: {
+            message: 'Hello world'
         }
     });
     //grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.registerTask('default', ['uglify', 'concat']);    
+    grunt.registerTask('printConfig', function() {
+        grunt.log.writeln(JSON.stringify(grunt.config(), null, 2));        
+        //grunt.log.writeln('tam ' + new Date());
+    });
+    grunt.registerTask('default', ['uglify', 'concat']);
+
 };
+
